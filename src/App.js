@@ -21,51 +21,10 @@ const AppContainer = styled.div`
   transition: background-color 0.3s ease;
 `;
 
-const LoadingScreen = styled(motion.div)`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--background-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: background-color 0.3s ease;
-`;
 
-const LoadingText = styled(motion.h1)`
-  color: var(--primary-color);
-  font-size: 2rem;
-  font-weight: 600;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-`;
-
-const LoadingSpinner = styled(motion.div)`
-  width: 40px;
-  height: 40px;
-  border: 3px solid var(--border-color);
-  border-top: 3px solid var(--primary-color);
-  border-radius: 50%;
-  margin-bottom: 1rem;
-`;
 
 function App() {
-  const [loading, setLoading] = useState(true);
   const [currentSection, setCurrentSection] = useState('home');
-
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,36 +44,7 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  if (loading) {
-    return (
-      <ThemeProvider>
-        <LoadingScreen
-          initial={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            style={{ textAlign: 'center' }}
-          >
-            <LoadingSpinner
-              animate={{ rotate: 360 }}
-              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-            />
-            <LoadingText
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            >
-              Loading Portfolio...
-            </LoadingText>
-          </motion.div>
-        </LoadingScreen>
-      </ThemeProvider>
-    );
-  }
+
 
   return (
     <ThemeProvider>

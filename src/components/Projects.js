@@ -61,11 +61,6 @@ const ProjectImage = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: var(--background-color);
 `;
 
 const ProjectContent = styled.div`
@@ -131,7 +126,7 @@ const Projects = () => {
       id: 1,
       title: 'Upgradist – Online Learning & Assessment Platform',
       description: 'An online learning and assessment platform with practice modules, topic-wise quizzes, test creation, leaderboard, and analytics. Features include role-based dashboards, dynamic test generation, and seamless user experience for students and admins.',
-      image: '/upgradist_thumb_image.png',
+      image: '/project-image.jpg',
       tech: ['React', 'Node.js', 'Express.js', 'Tailwind CSS', 'Cloudinary', 'MongoDB'],
       liveUrl: 'https://upgradist.vercel.app/',
       githubUrl: 'https://github.com/anmolrajas/EduQuest'
