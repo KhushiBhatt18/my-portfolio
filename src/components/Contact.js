@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { FiMail, FiPhone, FiMapPin, FiSend, FiCheck } from 'react-icons/fi';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { sendContactEmail } from '../service/emailService';
 
 const ContactSection = styled.section`
   padding: 8rem 2rem;
@@ -248,16 +251,35 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    try {
+      const payload = {
+        senderName: formData.name,
+        senderEmail: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      };
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+      console.log('Payload in contact me form:- ', payload);
 
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
-  };
+      await sendContactEmail(payload);
+
+      
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      toast.success('Your message has been sent successfully!');
+
+      setFormData({ name: '', email: '', subject: '', message: '' });
+
+      // Hide success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000);
+
+    } catch (error) {
+      console.error('Error sending contact email:', error);
+      setIsSubmitting(false);
+      toast.error('Failed to send your message. Please try again later.');
+    }
+  };  
 
   const contactMethods = [
     {
@@ -429,6 +451,7 @@ const Contact = () => {
           </ContactForm>
         </ContactGrid>
       </Container>
+      <ToastContainer position="top-right" autoClose={4000} />
     </ContactSection>
   );
 };

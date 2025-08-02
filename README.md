@@ -1,4 +1,4 @@
-# Portfolio Website
+# Anmol's Portfolio Website
 
 A modern, responsive portfolio website built with React, featuring dark/light mode toggle, smooth animations, and a beautiful UI.
 
