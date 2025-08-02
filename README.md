@@ -45,6 +45,7 @@ A modern, responsive portfolio website built with React, featuring dark/light mo
    npm start
    ```
 4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser
+5. You can also visit it on (https://anmolrajas.vercel.app)
 
 ## Customization
 
