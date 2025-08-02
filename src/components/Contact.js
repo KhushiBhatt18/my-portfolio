@@ -256,7 +256,8 @@ const Contact = () => {
         senderName: formData.name,
         senderEmail: formData.email,
         subject: formData.subject,
-        message: formData.message
+        message: formData.message,
+        receivedDate: new Date().toISOString()
       };
 
       console.log('Payload in contact me form:- ', payload);
