@@ -236,10 +236,24 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: 'Software Engineer Intern',
-      company: 'Mediology Software',
+      title: 'Software Engineer',
+      company: 'Mediology Software Pvt. Ltd.',
       location: 'Gurugram, India',
-      period: 'Aug 2024 - Aug 2025',
+      period: 'Aug 2025 - Present',
+      achievements: [
+        'Building membership and invoice dashboards, including a month‑wise automated invoice generator to streamline billing workflows.',
+        'Working with MCP (Model Context Protocol) servers to integrate advanced AI-driven functionalities into products.',
+        'Actively exploring AI technologies and contributing to features that bring AI capabilities to content management and automation.'
+      ],
+      tech: ['React', 'Node.js', 'TypeScript', 'MongoDB', 'Express', 'Tailwind CSS', 'AI', 'MCP servers'],
+      companyUrl: 'https://www.mediologysoftware.com'
+    },
+    {
+      id: 2,
+      title: 'Software Engineer Intern',
+      company: 'Mediology Software Pvt. Ltd.',
+      location: 'Gurugram, India',
+      period: 'Aug 2024 - July 2025',
       achievements: [
         'Worked on AI-powered CMS development and implementation',
         'Developed Cricket Widget Builder for enhanced user experience',
