@@ -207,7 +207,7 @@ const About = () => {
     {
       icon: <FiDatabase />,
       title: 'Database & Cloud',
-      description: 'MongoDB, PostgreSQL, MySQL'
+      description: 'MySQL'
     },
   ];
 
@@ -284,7 +284,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <p>
-              Hello! I'm <strong>Anmol Rajas</strong>, a passionate full-stack developer. My journey in web development started when I built my first 
+              Hello! I'm <strong>Khushi Bhatt</strong>, a passionate full-stack developer. My journey in web development started when I built my first 
               website, and I've been hooked ever since.
             </p>
             

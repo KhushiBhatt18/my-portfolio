@@ -81,7 +81,7 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Anmol Rajas
+            Khushi Bhatt
           </FooterLogo>
 
           <FooterDescription
@@ -133,7 +133,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <span>© {currentYear} Anmol Rajas. All rights reserved.</span>
+            <span>© {currentYear} Khushi Bhatt. All rights reserved.</span>
             <span>Made with</span>
             <HeartIcon
               animate={{ scale: [1, 1.2, 1] }}

@@ -321,7 +321,7 @@ const Hero = () => {
           </Greeting>
 
           <Name variants={itemVariants}>
-            Anmol Rajas
+            Khushi Bhatt
           </Name>
 
           <Title variants={itemVariants}>
@@ -329,7 +329,7 @@ const Hero = () => {
           </Title>
 
           <Description variants={itemVariants}>
-            I'm a full-stack developer specializing in building exceptional digital experiences. 
+            I'm a Data Analyst specializing in building exceptional digital experiences. 
             Currently, I'm focused on building accessible, human-centered products.
           </Description>
 
@@ -392,7 +392,7 @@ const Hero = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             whileHover={{ scale: 1.05 }}
           >
-            <ProfileImg src="/profile-image.jpg" alt="Anmol Rajas" />
+            <ProfileImg src="/profile-image.jpg" alt="Khushi Bhatt" />
           </ProfileImage>
         </ImageSection>
       </HeroContainer>
